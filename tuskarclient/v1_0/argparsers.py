@@ -11,6 +11,7 @@
 #    under the License.
 
 import argparse
+import tuskarclient
 import tuskarclient.utils as utils
 
 
@@ -23,6 +24,12 @@ def create_top_parser():
     parser.add_argument('-h', '--help',
                         action='store_true',
                         help="Print this help message and exit.",
+                        )
+
+    parser.add_argument('--version',
+                        action='version',
+                        help="Print version information and exit.",
+                        version=tuskarclient.__version__,
                         )
 
     parser.add_argument('--os-username',
